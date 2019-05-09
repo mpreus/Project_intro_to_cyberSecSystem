@@ -1,0 +1,919 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* WŁASNE STYLE */
+/* Zasadnicze elementy layoutu */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	color: #354200;
+	line-height: 1.6;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+	background-color: #fff161;
+}
+
+section, nav, footer {
+	padding: 30px 20px;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2.2rem;
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-size: 1.8rem;
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: 1.5rem;
+}
+
+p.topic {
+	text-align: center;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 1.8rem;
+}
+
+.definition, .state, .introduction, .system, .directive {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+
+/* Listy */
+li {
+	font-size: 1.5rem;
+	margin-left: 30px;
+}
+
+.list_main {
+	list-style-type: upper-latin;
+	text-indent: 20px;
+}
+
+.list_minor {
+	list-style-type: disc;
+}
+
+/* Nawigacja do kolejnych tematów szkolenia */
+.inner_nav {
+	text-align: center;
+	font-size: 1.6rem;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #bbb;
+	border-radius: 5px;
+	background: #dddddd;
+	background: -moz-linear-gradient(-45deg, #dddddd 0%, #f6f6f6 53%, #ffffff 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, #dddddd), color-stop(53%, #f6f6f6), color-stop(100%, #ffffff));
+	background: -webkit-linear-gradient(-45deg, #dddddd 0%, #f6f6f6 53%, #ffffff 100%);
+	background: -o-linear-gradient(-45deg, #dddddd 0%, #f6f6f6 53%, #ffffff 100%);
+	background: -ms-linear-gradient(-45deg, #dddddd 0%, #f6f6f6 53%, #ffffff 100%);
+	background: linear-gradient(135deg, #dddddd 0%, #f6f6f6 53%, #ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#ffffff', GradientType=1 );
+	background-color: #ddd;
+	box-shadow: 5px 5px 10px 0 #666;
+	margin-top: 30px;
+}
+
+.inner_nav:hover {
+text-align: center;
+	font-size: 1.6rem;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #bbb;
+	border-radius: 5px;
+	background: #dddddd;
+	background: -moz-linear-gradient(45deg, #eeeeee 0%, #ffffff 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, #eeeeee), color-stop(100%, #ffffff));
+	background: -webkit-linear-gradient(45deg, #eeeeee 0%, #ffffff 100%);
+	background: -o-linear-gradient(45deg, #eeeeee 0%, #ffffff 100%);
+	background: -ms-linear-gradient(45deg, #eeeeee 0%, #ffffff 100%);
+	background: linear-gradient(135deg, #eeeeee 0%, #ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=1 );
+	background-color: #ddd;
+	box-shadow: 3px 3px 10px 8px #666;
+	margin-top: 30px;
+}
+
+/* Inne elementy strony */
+a {
+	font-size: 1.8rem;
+	text-decoration: none;
+	color: #46003D;
+	font-weight: 700;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
+
+strong {
+	font-weight: 800;
+	color: #233122;
+}
+
+.accent {
+	color: darkred;
+	font-weight: 800;
+}
+
+img {
+	width: 80%;
+	margin: 10px 100px 10px 100px;
+	border: 1px solid #333;
+	border-radius: 5px;
+	box-shadow: 8px 8px 15px #333;
+}
+ 
+.below_image {
+	margin-top: 20px;
+}
+
+.author {
+	padding: 30px;
+	text-align: center;
+	color: #000;
+}
+
+div.documents {
+	margin-left: 66px;
+}
+
+/* Tooltipy CSS */
+#additional-info:hover {
+    position: relative;
+}
+#additional-info:hover:before {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: -280px;
+    content: "Tak wygląda dodatkowa treść w dymku. Poszerzają one wiedzę, komentują treść szkolenia, a czasem podpowiadają co jeszcze przeczytać.";
+    width: 24em;
+    height: 5em;
+    line-height: 1.6em;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    background-color: lightgrey;
+    box-shadow: 3px 3px 3px 3px darkred;
+    font-size: 1em;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+#browsers:hover {
+  	position: relative;
+}
+#browsers:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 40px;
+  	content: "Chrome, Firefox, Opera, Safari";
+  	width: 20em;
+  	height: 2em;
+  	line-height: 2em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+    font-weight: normal;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#training:hover {
+  	position: relative;
+}
+#training:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 10px;
+  	content: "Szczegółowe szkolenie na ten temat należy sprofilować, w zależności od charakteru instytucji dla której jest przeznaczone.";
+  	width: 27em;
+  	height: 5em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+    font-weight: normal;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#processing:hover {
+  	position: relative;
+}
+#processing:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 10px;
+  	content: "Np. porównywanie jej z innymi, uzyskanymi z innych źródeł, umieszczanie w kontekście (kulturowym, społecznym, organizacyjnym itd.).";
+  	width: 27em;
+  	height: 5em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#printed:hover {
+  	position: relative;
+}
+#printed:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 10px;
+  	content: "Np. wpływające do instytucji, przechowywane w archiwach, drukowane na miejscu (obieg wewnętrzny), wysyłane do odbiorców zewnętrzncyh.";
+  	width: 27em;
+  	height: 5em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#people:hover {
+  	position: relative;
+}
+#people:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 10px;
+  	content: "Najbardziej wrażliwy i najmniej przewidywalny nośnik informacji. Najczęściej też najbardziej zaniedbany.";
+  	width: 27em;
+  	height: 3.5em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#state:hover {
+  	position: relative;
+}
+#state:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 10px;
+  	content: "Od prostej wymiany informacji między resortami, do zautomatyzowanych systemów rozpoznania powietrznego, od sporządzania analiz dla rządu do zarządzania systemem elektronenergetycznym kraju.";
+  	width: 27em;
+  	height: 6.5em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#cyberspace:hover {
+  	position: relative;
+}
+#cyberspace:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 340px;
+  	content: "Cyberprzestrzeń niewiele ma wspólnego z cybernetyką, a z fizycznie pojętą przestrzenią jeszcze mniej.";
+  	width: 25em;
+  	height: 3.5em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#interactivity:hover {
+  	position: relative;
+}
+#interactivity:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: -440px;
+  	content: "Interaktywność to zdolność do interakcji, umożliwienie operatorowi wpływanie na kształt systemu, jego oprogramowania czy rezultatów.";
+  	width: 27em;
+  	height: 5em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#multimedia:hover {
+  	position: relative;
+}
+#multimedia:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	content: "Multimedialność to wielość kanałów przekazu: najczęściej dźwięk, obraz, wideo, tekst i dane.";
+  	width: 27em;
+  	height: 3.5em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#hypertext:hover {
+  	position: relative;
+}
+#hypertext:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 40px;
+  	content: "Hipertekstowość to zorganizowanie danych w niezależne leksje (całościowe akapity) połączone hiperłączami, co generuje to nielinearność tekstu.";
+  	width: 27em;
+  	height: 5em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#internet-of-things:hover {
+    position: relative;
+}
+#internet-of-things:hover:before {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 0;
+    content: "Jak w całej tej sferze, również pojęcie Internetu rzeczy dopiero kształtuje się. Dlatego nie ma jednej, powszechnie przyjętej definicji. Wiele interesujących spostrzeżeń w 'Internet of Things. Nowy paradygmat rynku' pod red. Ł. Sułkowskiego, D. Kaczorowskiej-Spychalskiej, Warszawa 2018.";
+    width: 32em;
+    height: 8em;
+    line-height: 1.6em;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    background-color: lightgrey;
+    box-shadow: 3px 3px 3px 3px darkred;
+    font-size: 1em;
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+#industry-4-0:hover {
+    position: relative;
+}
+#industry-4-0:hover:before {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 0;
+    content: "Pojęcie przemysłu 4.0 nie jest jeszcze jednoznacznie zdefiniowane. Nieco inne podejści prezentują praktycy - inżynierowie bezpośrednio organizujący produkcję przemysłową, a nieco inaczej badacze.";
+    width: 32em;
+    height: 5.5em;
+    line-height: 1.6em;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    background-color: lightgrey;
+    box-shadow: 3px 3px 3px 3px darkred;
+    font-size: 1em;
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+#infowar:hover {
+    position: relative;
+}
+#infowar:hover:before {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 0;
+    content: "Często zamiennie stosuje się określenia: walka informacyjna, wojna informacyjna, a nawet działania informacyjne. Jest to uproszczenie, bowiem każda z tych fraz znajduje zastosowanie w nieco innym kontekście. Dla potrzeb wprowadzenia do systemu cyberbezpieczeństwa ma to jednak drugorzędne znaczenie.";
+    width: 32em;
+    height: 8em;
+    line-height: 1.6em;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    background-color: lightgrey;
+    box-shadow: 3px 3px 3px 3px darkred;
+    font-size: 1em;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+#mnemonic:hover {
+  	position: relative;
+}
+#mnemonic:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 0;
+  	content: "W 2021 roku cały świat połączony jest gigantyczną siecią internetu. Prawie połowa ludzkości cierpi na tajemniczą chorobę NAS. Johnny'emu, który posiada w mózgu implant pamięci, zainstalowano zbyt dużą ilość informacji i powierzono przewiezienie ich do Newark. Informacje dotyczące lekarstwa na NAS są jednak zagrożeniem dla życia bohatera - ich ilość powoduje zniszczenia w jego mózgu, a poza tym korporacja Pharmakom stara się nie dopuścić do upublicznienia informacji.";
+  	width: 40em;
+  	height: 10em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#matrix:hover {
+  	position: relative;
+}
+#matrix:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 0;
+  	content: "Neo jest genialnym hakerem. Pewnego dnia nawiązuje z nim kontakt tajemniczy Morfeusz - człowiek, który obiecuje przekazać mu wiedzę o dwóch światach: prawdziwym i wygenerowanym, który ma tylko udawać rzeczywistość. Neo przystaje do grupy Morfeusza i zaczyna dostrzegać, że świat, w którym egzystował to fikcja, a jego życiem cały czas ktoś kierował. Kolejne stopnie wtajemniczenia stawiają przed Neo nowe pytania, m.in. o istotę Matrixa.";
+  	width: 40em;
+  	height: 10em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#info-systems:hover {
+  	position: relative;
+}
+#info-systems:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 64px;
+  	left: -800px;
+  	content: "Zasoby informacji i wiedzy w każdej dziedzinie, przechowywane zwykle w postaci elektronicznej na dyskach, serwerach itp.; ale też ludzie posiadający określoną wiedzę, poglądy;";
+  	width: 24em;
+  	height: 6.5em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#info-steering:hover {
+  	position: relative;
+}
+#info-steering:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 0;
+  	content: "Procesy decyzyjne związane z przesyłaniem, analizą i przetwarzaniem informacji zwykle za pomocą komputerów z odpowiednim oprogramowaniem; tu też niepoślednią rolę odgrywają analitycy i doradcy.";
+  	width: 23em;
+  	height: 8em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#national-cyber-system:hover {
+    position: relative;
+}
+#national-cyber-system:hover:before {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 0;
+    content: "Na pierwszy rzut oka wydzielanie narodowej cyberprzestrzeni i jej ochrona może wydawać się nieracjonalne. Na tym jednak oparte są szersze systemy ochrony interesów społecznych, narodowych i międzynarodowych (poza biznesowych).";
+    width: 24em;
+    height: 8em;
+    line-height: 1.6em;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    background-color: lightgrey;
+    box-shadow: 3px 3px 3px 3px darkred;
+    font-size: 1em;
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+#plenipotentiary:hover {
+    position: relative;
+}
+#plenipotentiary:hover:before {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 0;
+    content: "Z dniem 7 grudnia 2018 r. Premier Mateusz Morawiecki powołał Karola Okońskiego, Sekretarza Stanu w Ministerstwie Cyfryzacji, na stanowisko Pełnomocnika Rządu ds. Cyberbezpieczeństwa.";
+    width: 24em;
+    height: 6.5em;
+    line-height: 1.6em;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    background-color: lightgrey;
+    box-shadow: 3px 3px 3px 3px darkred;
+    font-size: 1em;
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+#cybersecurity-system:hover {
+    position: relative;
+}
+#cybersecurity-system:hover:before {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 0;
+    content: "Elementy te warto porównać z elementami systemu bezpieczeństwa omówionymi w ostatniej części szkolenia.";
+    width: 32em;
+    height: 3.3em;
+    line-height: 1.6em;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    background-color: lightgrey;
+    box-shadow: 3px 3px 3px 3px darkred;
+    font-size: 1em;
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+#software:hover {
+  	position: relative;
+}
+#software:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 0;
+  	content: "Np. w Polsce w większości instytucji używa się pakietu Office firmy Microsoft. W wielu niemal niemożliwe jest posługiwanie się innym, ze względu na ograniczoną kompatybilność.";
+  	width: 24em;
+  	height: 6.5em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#effectivness:hover {
+  	position: relative;
+}
+#effectivness:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: -100px;
+  	content: "Częste jest (jak przyznają sami pracownicy) traktowanie procedur jako zapory dla efektywności, a nie jako elementów zabezpieczenia.";
+  	width: 23em;
+  	height: 5em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#cyberattack:hover {
+  	position: relative;
+}
+#cyberattack:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 0;
+  	content: "Szczegółowych scenariuszy jest wiele, do ciekawszych należy powieść 'Blackout' napisana przez M. Elsberga. Mimo tej wielości scenariuszy negatywnego rozwoju sytuacji, planów zapobiegawczych jest niewiele.";
+  	width: 32em;
+  	height: 5em;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	font-weight: normal;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#doctrine:hover {
+  	position: relative;
+}
+#doctrine:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: -440px;
+  	content: "Dokument normatywny precyzujący poglądy przyjęte w jakiejś sferze aktywności społecznej (np. w państwie, resorcie, dziedzinie nauki, obronności). Na szczeblu państwowym w oparciu o przyjęte w doktrynie poglądy i nomenklaturę tworzy się najważniejsze dokumenty strategiczne i operacyjne. Każdy podmiot biorący udział w jakichkolwiek pracach w danej sferze aktywności państwa (resortu) powinien odnosić się do założeń, twierdzeń i przekonań wyrażonych w doktrynie.";
+  	width: 41em;
+  	height: 9.5em;
+  	padding: 0 15px;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	font-weight: normal;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#strategy:hover {
+  	position: relative;
+}
+#strategy:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: -584px;
+  	content: "Teoria i praktyka działania ukierunkowanego na osiągnięcie założonych celów w danej dziedzinie, ujmowanych w skali ogólnej i mających charakter długofalowy. Jest więc strategia specyficznym planem działania realizowanym dla osiągnięcia zasadniczego, długofalowego celu danego podmiotu. W strategii precyzuje się (ogólnie) etapy osiągnięcia celu głównego oraz sposoby osiągania tych celów i podmioty za to odpowiedzialne wraz ze wskazaniem zasadniczych źródeł finansowania. Co do zasady, strategie przyjmuje się dla realizacji takich celów, których osiągnięcie wymaga zaangażowania znacznej części posiadanych zasobów.";
+  	width: 41em;
+  	height: 13em;
+  	padding: 0 15px;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	font-weight: normal;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#project:hover {
+  	position: relative;
+}
+#project:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: -90px;
+  	content: "Obowiązek opracowania projektu strategii cyberbezpieczeństwa wynika wprost z przepisów ustawy o krajowy systemie cyberbezpieczeństwa (art. 70.1).";
+  	width: 23em;
+  	height: 6.5em;
+  	padding: 0 15px;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	font-weight: normal;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#system:hover {
+  	position: relative;
+}
+#system:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: -340px;
+  	content: "Można z pewnym uproszczeniem przyjąć, że system to taki zbiór elementów, które wchodząc w interakcje między sobą tworzą większą wartość niż prosta suma wszystkich tych elementów.";
+  	width: 23em;
+  	height: 6.5em;
+  	padding: 0 15px;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	font-weight: normal;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#government:hover {
+  	position: relative;
+}
+#government:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: -310px;
+  	content: "Źródłami powszechnie obowiązującego prawa Rzeczypospoltej Polskiej są: Konstytucja, ustawy, ratyfikowane umowy międzynarodowe oraz rozporządzenia, a także akty prawa miejscowego na obszarze działania organów, które go wydały.";
+  	width: 26em;
+  	height: 8em;
+  	padding: 0 15px;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	font-weight: normal;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#passive:hover {
+  	position: relative;
+}
+#passive:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: 0;
+  	content: "Aktywne podejście do cyberbezpieczeństwa musiałoby uwzględniać: (a) identyfikowanie wrażliwych zasobów (danych, infrastruktury, obiektów, personelu itp.), (b) programowanie, planowanie, wdrażanie systemów ochrony, w tym szkolenie personelu wszystkich szczebli.";
+  	width: 26em;
+  	height: 8em;
+  	padding: 0 15px;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	font-weight: normal;
+  	text-align: center;
+  	display: inline-block;
+}
+
+#conception:hover {
+  	position: relative;
+}
+#conception:hover:before {
+  	position: absolute;
+    z-index: 2;
+  	top: 25px;
+  	left: -536px;
+  	content: "Doktryna jest dokumentem o charakterze koncepcyjnym. Nie ma mocy prawnej (a zwłaszcza nie jest prawem powszechnie obowiązującym).";
+  	width: 26em;
+  	height: 5em;
+  	padding: 0 15px;
+  	line-height: 1.6em;
+  	border: 1px solid darkgrey;
+  	border-radius: 5px;
+  	background-color: lightgrey;
+  	box-shadow: 3px 3px 3px 3px darkred;
+  	font-size: 1em;
+  	color: black;
+  	font-weight: normal;
+  	text-align: center;
+  	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
